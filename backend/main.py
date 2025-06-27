@@ -18,6 +18,7 @@ app.add_middleware(
 async def submit_workout(data: WorkoutInput):
     print(f"Workout Data Received: ({data})")
     plan = PlanGenerator(data)
+    plan.generate_plan()
     print(f"Workout Plan Generated: ({plan})")
 
 if __name__ == "__main__":

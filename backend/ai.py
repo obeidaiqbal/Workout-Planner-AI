@@ -9,4 +9,4 @@ class PlanGenerator:
         return f"data: {self.data}"
         
     def generate_plan(self):
-        pass
+        print(f"{self.data.age}")
