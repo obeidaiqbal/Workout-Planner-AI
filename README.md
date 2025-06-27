@@ -36,12 +36,12 @@ At the command line clone the repository
 ```bash
 git clone https://github.com/obeidaiqbal/Workout-Planner-AI.git
 ```
-To setup the frontend run the following code, make sure node.js and npm are installed
+To setup the frontend run the following code to install react dependencies, make sure node.js and npm are installed
 ```bash
 cd frontend
 npm install
 ```
-To setup the backend go return to the root folder and run the following code
+To setup the backend virtual enviornment go return to the root folder and run the following code
 ```bash
 cd backend
 python3 -m venv venv
