@@ -65,7 +65,7 @@ npm start
 ```bash
 cd backend
 source venv/bin/activate
-python3 main.py
+uvicorn main:app --reload
 ```
 
 ---

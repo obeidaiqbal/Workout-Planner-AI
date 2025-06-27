@@ -1,10 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from routes import router as workout_router
+from schemas import WorkoutInput
 
 app = FastAPI()
 
-# CORS setup
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -12,5 +12,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register routes
-app.include_router(workout_router)
+@app.post("/submit")
+async def submit_workout(data: WorkoutInput):
+    print("Workout Data Received:", data.dict())
+    return {
+        "message": "Workout data received.",
+        "data": data.dict()
+    }
