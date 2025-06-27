@@ -18,7 +18,7 @@
 - Sends the collected data as JSON to the FastAPI backend using `fetch`
 - Route API requests to the backend thorugh a local host proxy:
   ```json
-  "proxy": "http://localhost:8000"
+  "http://localhost:8000"
   ```
 
 ---
