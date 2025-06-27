@@ -2,6 +2,7 @@ from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import WorkoutInput
 from ai import PlanGenerator
+import uvicorn
 
 app = FastAPI()
 
@@ -18,3 +19,6 @@ async def submit_workout(data: WorkoutInput):
     print(f"Workout Data Received: ({data})")
     plan = PlanGenerator(data)
     print(f"Workout Plan Generated: ({plan})")
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
