@@ -16,7 +16,7 @@
 - React application built with `create-react-app`
 - Displays a form to collect user data (e.g., goals, experience, measurements)
 - Sends the collected data as JSON to the FastAPI backend using `fetch`
-- Uses a proxy to route API requests to the backend by setting this in `package.json`:
+- Route API requests to the backend thorugh a local host proxy:
   ```json
   "proxy": "http://localhost:8000"
   ```
