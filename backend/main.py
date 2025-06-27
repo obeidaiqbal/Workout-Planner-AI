@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import WorkoutInput
+from ai import PlanGenerator
 
 app = FastAPI()
 
@@ -14,8 +15,6 @@ app.add_middleware(
 
 @app.post("/submit")
 async def submit_workout(data: WorkoutInput):
-    print("Workout Data Received:", data.dict())
-    return {
-        "message": "Workout data received.",
-        "data": data.dict()
-    }
+    print(f"Workout Data Received: ({data})")
+    plan = PlanGenerator(data)
+    print(f"Workout Plan Generated: ({plan})")
