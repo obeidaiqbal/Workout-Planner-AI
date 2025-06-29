@@ -9,4 +9,11 @@ class PlanGenerator:
         return f"data: {self.data}"
         
     def generate_plan(self):
-        print(f"{self.data.age}")
+        input = f"{self.data.age} year old {self.data.sex}, workout level is {self.data.experience}, target workout frequency is {self.data.frequency} with a focus on {self.data.focus}"
+        if self.data.mode == "imperial":
+            inputTwo = f", persons weight is {self.data.lbs} pounds and height is {self.data.feet} feet {self.data.inches} inches"
+            input += inputTwo
+        else:
+            inputTwo = f", persons weight is {self.data.kgs} kgs and height is {self.data.meters} meters"
+            input += inputTwo
+        print(input)

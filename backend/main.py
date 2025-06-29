@@ -16,10 +16,8 @@ app.add_middleware(
 
 @app.post("/submit")
 async def submit_workout(data: WorkoutInput):
-    print(f"Workout Data Received: ({data})")
     plan = PlanGenerator(data)
     plan.generate_plan()
-    print(f"Workout Plan Generated: ({plan})")
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
