@@ -14,7 +14,7 @@ class PlanGenerator:
         )
 
     def __str__(self):
-        return f"data: {self.data}"
+        return {self.data}
         
     def generate_plan(self):
         input = f"""Create a weekly workout plan for someone with the following biodata and goals:
@@ -33,4 +33,4 @@ class PlanGenerator:
                     "content": input
             }],
         )
-        print(completion.choices[0].message)
+        self.data = completion.choices[0].message
