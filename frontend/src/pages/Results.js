@@ -39,7 +39,6 @@ export default function Results() {
         value={JSON.stringify(workoutData.data.content, null, 2)}
       />
 
-
       <button className="btn btn-secondary mt-3" onClick={() => navigate('/')}>
         Back to Form
       </button>
