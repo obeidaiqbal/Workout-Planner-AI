@@ -5,6 +5,7 @@ export default function Results() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const workoutData = state?.workoutData;
+  
 
   if (!workoutData) {
     return (
@@ -22,7 +23,22 @@ export default function Results() {
       <h3 className="mb-3">Your 3-Month Workout Plan</h3>
       
       {/* Simple JSON display for now */}
-      <pre>{JSON.stringify(workoutData, null, 2)}</pre>
+      <textarea
+        style={{
+          width: "100%",
+          height: "400px",
+          overflowY: "auto",
+          backgroundColor: "#f8f9fa",
+          padding: "10px",
+          border: "1px solid #ccc",
+          borderRadius: "5px",
+          fontFamily: "monospace",
+          whiteSpace: "pre-wrap",
+        }}
+        readOnly
+        value={JSON.stringify(workoutData.data.content, null, 2)}
+      />
+
 
       <button className="btn btn-secondary mt-3" onClick={() => navigate('/')}>
         Back to Form

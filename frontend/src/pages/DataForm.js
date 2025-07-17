@@ -42,7 +42,7 @@ export default function DataForm() {
       kgs: data.kg,
       lbs: data.lbs,
     };
-
+    console.log("Data Submitted:", formData);
     fetch('http://localhost:8000/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
