@@ -12,6 +12,7 @@
 - **FastAPI** app with a `POST /submit` endpoint that accepts workout data
 - Configured with **CORS middleware** to allow requests from `http://localhost:3000`
 - Integrated **Hugging Face Transformers** API with the `deepseek-ai/DeepSeek-R1` model to generate tailored workout plans
+- Routed workout data to be returned back to frontend after response is received from the `deepseek-ai/DeepSeek-R1` model
 
 `frontend/`:
 - React application built with `create-react-app`
@@ -21,6 +22,7 @@
   ```json
   "http://localhost:8000"
   ```
+- Reworked the frontend to have multiple pages, one for the forum data and another for the results
 
 ---
 
