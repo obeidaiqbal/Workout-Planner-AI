@@ -31,6 +31,10 @@
 - Node.js and npm: https://nodejs.org/en
 - Python 3.x: https://www.python.org/downloads/
 
+#### Model Used
+
+- `deepseek-ai/DeepSeek-R1`: https://huggingface.co/deepseek-ai/DeepSeek-R1?inference_provider=nebius
+
 ---
 
 ### First Time Setup
