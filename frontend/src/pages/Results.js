@@ -22,7 +22,6 @@ export default function Results() {
     <div className="container py-4">
       <h3 className="mb-3">Your 3-Month Workout Plan</h3>
       
-      {/* Simple JSON display for now */}
       <textarea
         style={{
           width: "100%",

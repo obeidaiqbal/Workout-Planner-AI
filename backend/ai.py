@@ -26,6 +26,21 @@ class PlanGenerator:
         else:
             inputTwo = f", persons weight is {self.data.kgs} kgs and height is {self.data.meters} meters"
             input += inputTwo
+            input += """give the output in json format with the following format:
+            {
+                "day": {
+                    "workout": [
+                        {
+                            "exercise": "name of exercise",
+                            "sets": number of sets,
+                            "reps": number of reps,
+                            "rest": "rest time between sets"
+                            "reasons": "why this exercise is included"
+                        }
+                    ]
+                }
+            }
+            """
         completion = self.client.chat.completions.create(
             model="deepseek-ai/DeepSeek-R1",
             messages=[{
